@@ -1,6 +1,11 @@
 import "./style.css";
 
-const title = document.createElement("h1");
-title.textContent = "Test Title";
+document.addEventListener("DOMContentLoaded", () => {
+  const menu_btn = document.getElementById("menu-items-btn");
+  const MENU_ITEMS_HTML = document.querySelector(".menu-items");
+  let menu_items_html_classes = MENU_ITEMS_HTML.classList;
 
-document.body.appendChild(title);
+  menu_btn.addEventListener("click", () => {
+    menu_items_html_classes.toggle("hidden");
+  });
+});
